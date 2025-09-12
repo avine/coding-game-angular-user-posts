@@ -19,3 +19,15 @@
 
 - create ellipsis pipe
 - use it in user-post-item component
+
+## Concepts covered in this exercise
+
+- App creation
+- Component implementation (some HTML, CSS and TS)
+- Property binding and event listener in templates
+- Content projection (ng-content)
+- Component communication (input)
+- Routing (Route, Resolver, withComponentInputBinding, Lazy loading)
+- HttpClient (including some RxJS operators)
+- Signal
+- Pipe (nice to have)
