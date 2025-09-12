@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  margin-inline: auto;
+  max-width: 600px;
+  padding-inline: 1.5rem;
+}
+
+header {
+  border-bottom: 1px solid lightgray;
+  padding-block: 1rem;
+}
+
+main {
+  padding-block: 2.5rem;
+}
+
+footer {
+  border-top: 1px solid lightgray;
+  padding-block: 1rem;
+  text-align: center;
+}
