@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "docs": "rm -rf ./docs && ng build user-posts --base-href /entretien-angular-user-posts/ && mv ./dist/user-posts/browser ./docs"
   },
   "prettier": {
     "printWidth": 100,
