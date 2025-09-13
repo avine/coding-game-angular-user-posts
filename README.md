@@ -1,5 +1,9 @@
 # Live coding: User posts
 
+This implementation is intended for senior developers.
+
+For junior developers, use the [junior-dev project](./projects/junior-dev) (`ng serve junior-dev`).
+
 ## Steps to follow
 
 - empty the app component template, but keep the router related tag
