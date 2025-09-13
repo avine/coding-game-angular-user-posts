@@ -89,6 +89,96 @@
         }
       }
     },
+    "senior-dev-legacy": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/senior-dev-legacy",
+      "sourceRoot": "projects/senior-dev-legacy/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "projects/senior-dev-legacy/src/main.ts",
+            "tsConfig": "projects/senior-dev-legacy/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/senior-dev-legacy/public"
+              }
+            ],
+            "styles": ["projects/senior-dev-legacy/src/styles.scss"]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "senior-dev-legacy:build:production"
+            },
+            "development": {
+              "buildTarget": "senior-dev-legacy:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/senior-dev-legacy/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/senior-dev-legacy/public"
+              }
+            ],
+            "styles": ["projects/senior-dev-legacy/src/styles.scss"]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/senior-dev-legacy/**/*.ts",
+              "projects/senior-dev-legacy/**/*.html"
+            ],
+            "eslintConfig": "projects/senior-dev-legacy/eslint.config.js"
+          }
+        }
+      }
+    },
     "junior-dev": {
       "projectType": "application",
       "schematics": {

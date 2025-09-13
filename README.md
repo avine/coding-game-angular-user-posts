@@ -1,10 +1,10 @@
 # Live coding: User posts
 
-This implementation is intended for senior developers.
+- For senior developers using modern Angular, use the default app (`ng serve`).
+- For senior developers using legacy code, use the [senior-dev-legacy project](./projects/senior-dev-legacy) (`ng serve senior-dev-legacy`).
+- For junior developers, use the [junior-dev project](./projects/junior-dev) (`ng serve junior-dev`).
 
-For junior developers, use the [junior-dev project](./projects/junior-dev) (`ng serve junior-dev`).
-
-## Steps to follow
+## Steps to follow (for senior developers using modern Angular)
 
 - empty the app component template, but keep the router related tag
 
@@ -37,7 +37,7 @@ For junior developers, use the [junior-dev project](./projects/junior-dev) (`ng 
 - create ellipsis pipe
 - use ellipsis pipe for the body in user-post-item component
 
-## Concepts covered in this exercise
+## Concepts covered in this coding game
 
 - App creation
 - Component implementation (HTML, CSS and TS)

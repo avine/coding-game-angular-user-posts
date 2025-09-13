@@ -10,6 +10,8 @@
     "lint": "ng lint --fix",
     "format": "prettier --write .",
     "docs": "rm -rf ./docs && ng build senior-dev --base-href /live-coding-angular-user-posts/ && mv ./dist/senior-dev/browser ./docs",
+    "start:senior": "npm start",
+    "start:senior-legacy": "ng serve senior-dev-legacy",
     "start:junior": "ng serve junior-dev"
   },
   "prettier": {

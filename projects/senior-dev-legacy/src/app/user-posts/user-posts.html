@@ -1,0 +1,7 @@
+@if (posts(); as _posts) {
+  @for (post of _posts; track post.id) {
+    <app-user-post-item [index]="$index + 1" [post]="post" />
+  } @empty {
+    <em>No data...</em>
+  }
+}
