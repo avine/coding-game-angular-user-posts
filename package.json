@@ -1,5 +1,5 @@
 {
-  "name": "live-coding-angular-user-posts",
+  "name": "coding-game-angular-user-posts",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint --fix",
     "format": "prettier --write .",
-    "docs": "rm -rf ./docs && ng build senior-dev --base-href /live-coding-angular-user-posts/ && mv ./dist/senior-dev/browser ./docs",
+    "docs": "rm -rf ./docs && ng build senior-dev --base-href /coding-game-angular-user-posts/ && mv ./dist/senior-dev/browser ./docs",
     "start:senior": "npm start",
     "start:senior-legacy": "ng serve senior-dev-legacy",
     "start:junior": "ng serve junior-dev"
