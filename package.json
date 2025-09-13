@@ -1,5 +1,5 @@
 {
-  "name": "user-posts",
+  "name": "live-coding-angular-user-posts",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint --fix",
     "format": "prettier --write .",
-    "docs": "rm -rf ./docs && ng build user-posts --base-href /live-coding-angular-user-posts/ && mv ./dist/user-posts/browser ./docs"
+    "docs": "rm -rf ./docs && ng build senior-dev --base-href /live-coding-angular-user-posts/ && mv ./dist/senior-dev/browser ./docs",
+    "start:junior": "ng serve junior-dev"
   },
   "prettier": {
     "printWidth": 100,

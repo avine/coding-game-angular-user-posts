@@ -1,0 +1,13 @@
+<nav>
+  <button (click)="userId.set(1)" [class.active]="userId() === 1">UserID 1</button>
+  <button (click)="userId.set(2)" [class.active]="userId() === 2">UserID 2</button>
+  <button (click)="userId.set(3)" [class.active]="userId() === 3">UserID 3</button>
+</nav>
+
+@if (posts(); as _posts) {
+  @for (post of _posts; track post.id) {
+    <app-user-post-item [index]="$index + 1" [post]="post" />
+  } @empty {
+    <br /><em>No data...</em>
+  }
+}

@@ -1,0 +1,15 @@
+@let _post = post();
+
+<h3>
+  @if (index() !== undefined) {
+    {{ index() }}.
+  }
+
+  {{ _post.title }}
+</h3>
+
+<button (click)="toggleBody()">Show/hide body</button>
+
+@if (showBody()) {
+  <p>{{ _post.body }}</p>
+}
