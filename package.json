@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint --fix",
     "format": "prettier --write .",
-    "docs": "rm -rf ./docs && ng build user-posts --base-href /entretien-angular-user-posts/ && mv ./dist/user-posts/browser ./docs"
+    "docs": "rm -rf ./docs && ng build user-posts --base-href /live-coding-angular-user-posts/ && mv ./dist/user-posts/browser ./docs"
   },
   "prettier": {
     "printWidth": 100,

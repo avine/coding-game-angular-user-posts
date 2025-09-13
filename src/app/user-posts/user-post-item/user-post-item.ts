@@ -16,6 +16,6 @@ export class UserPostItem {
   protected showBody = signal(false);
 
   protected toggleBody() {
-    this.showBody.update((show) => !show);
+    this.showBody.update((showBody) => !showBody);
   }
 }

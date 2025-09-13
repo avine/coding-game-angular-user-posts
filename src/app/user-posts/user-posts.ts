@@ -6,7 +6,6 @@ import { UserPost } from './user-post-types';
   selector: 'app-user-posts',
   imports: [UserPostItem],
   templateUrl: './user-posts.html',
-  styleUrl: './user-posts.scss',
 })
 export class UserPosts {
   posts = input<UserPost[]>();
