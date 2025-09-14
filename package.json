@@ -9,7 +9,9 @@
     "test": "ng test",
     "lint": "ng lint --fix",
     "format": "prettier --write .",
-    "docs": "rm -rf ./docs && ng build senior-dev --base-href /coding-game-angular-user-posts/ && mv ./dist/senior-dev/browser ./docs",
+    "predocs": "rm -rf ./docs",
+    "docs": "ng build senior-dev --base-href /coding-game-angular-user-posts/ && mv ./dist/senior-dev/browser ./docs",
+    "postdocs": "cp ./docs/index.html ./docs/404.html",
     "start:senior": "npm start",
     "start:senior-legacy": "ng serve senior-dev-legacy",
     "start:junior": "ng serve junior-dev"
