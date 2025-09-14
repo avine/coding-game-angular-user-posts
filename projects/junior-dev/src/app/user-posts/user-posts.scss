@@ -1,17 +1,19 @@
 nav {
+  margin-bottom: 1rem;
   display: flex;
   gap: 0.75rem;
 }
 
 button {
-  border-radius: 0.25rem;
-  border: 1px solid lightgrey;
-  padding: 0.25rem 0.5rem;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  background-color: white;
   color: black;
   font: inherit;
+  cursor: pointer;
 
   &.active {
-    background-color: grey;
+    background-color: black;
     color: white;
   }
 }

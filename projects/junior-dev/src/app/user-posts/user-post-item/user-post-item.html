@@ -8,7 +8,7 @@
   {{ _post.title }}
 </h3>
 
-<button (click)="toggleBody()">Show/hide body</button>
+<button class="toggle" (click)="toggleBody()">Show/hide body</button>
 
 @if (showBody()) {
   <p>{{ _post.body }}</p>
