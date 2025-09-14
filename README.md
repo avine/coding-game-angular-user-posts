@@ -13,8 +13,8 @@
 - create layout component
 - insert layout component into app component
 
-- create user-menu component
-- insert user-menu component into app component
+- create menu component
+- insert menu component into app component
 
 - create home component
 - add routing for home component
