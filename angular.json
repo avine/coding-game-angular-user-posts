@@ -3,11 +3,18 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "user-posts": {
+    "coding-game": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:resolver": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -56,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "user-posts:build:production"
+              "buildTarget": "coding-game:build:production"
             },
             "development": {
-              "buildTarget": "user-posts:build:development"
+              "buildTarget": "coding-game:build:development"
             }
           },
           "defaultConfiguration": "development"
