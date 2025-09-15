@@ -1,6 +1,6 @@
+import { AsyncPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, EMPTY, map, switchMap } from 'rxjs';
 import { UserPostItem } from './user-post-item/user-post-item';
@@ -8,7 +8,7 @@ import { UserPostsDto } from './user-post-types';
 
 @Component({
   selector: 'app-user-posts',
-  imports: [UserPostItem],
+  imports: [AsyncPipe, UserPostItem],
   templateUrl: './user-posts.html',
 })
 export class UserPosts {
@@ -31,7 +31,4 @@ export class UserPosts {
         ),
     ),
   );
-
-  // Alternative: use `posts$ | async` in the template instead of `toSignal`
-  protected posts = toSignal(this.posts$);
 }
