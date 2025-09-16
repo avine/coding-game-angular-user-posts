@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, effect, inject, signal } from '@angular/core';
 import { UserPostItem } from './user-post-item/user-post-item';
-import { UserPost, UserPostsDto } from './user-post-types';
+import { UserPost } from './user-post-types';
+import { UserPostsService } from './user-posts-service';
 
 @Component({
   selector: 'app-user-posts',
@@ -10,7 +10,7 @@ import { UserPost, UserPostsDto } from './user-post-types';
   styleUrl: './user-posts.scss',
 })
 export class UserPosts {
-  private httpClient = inject(HttpClient);
+  private userPostsService = inject(UserPostsService);
 
   protected userId = signal<number | undefined>(undefined);
 
@@ -22,9 +22,7 @@ export class UserPosts {
       if (!userId) {
         return;
       }
-      this.httpClient
-        .get<UserPostsDto>(`https://dummyjson.com/users/${userId}/posts`)
-        .subscribe(({ posts }) => this.posts.set(posts));
+      this.userPostsService.fetch(userId).subscribe((posts) => this.posts.set(posts));
     });
   }
 }

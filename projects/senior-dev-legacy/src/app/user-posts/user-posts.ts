@@ -1,10 +1,9 @@
 import { AsyncPipe } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { catchError, EMPTY, map, switchMap } from 'rxjs';
+import { catchError, EMPTY, switchMap } from 'rxjs';
 import { UserPostItem } from './user-post-item/user-post-item';
-import { UserPostsDto } from './user-post-types';
+import { UserPostsService } from './user-posts-service';
 
 @Component({
   selector: 'app-user-posts',
@@ -14,21 +13,18 @@ import { UserPostsDto } from './user-post-types';
 export class UserPosts {
   private activatedRoute = inject(ActivatedRoute);
 
-  private httpClient = inject(HttpClient);
+  private userPostsService = inject(UserPostsService);
 
   private router = inject(Router);
 
   protected posts$ = this.activatedRoute.params.pipe(
     switchMap((params) =>
-      this.httpClient
-        .get<UserPostsDto>(`https://dummyjson.com/users/${params['userId']}/posts`)
-        .pipe(
-          map(({ posts }) => posts),
-          catchError(() => {
-            this.router.navigate(['/not-found']);
-            return EMPTY;
-          }),
-        ),
+      this.userPostsService.fetch(params['userId']).pipe(
+        catchError(() => {
+          this.router.navigate(['/not-found']);
+          return EMPTY;
+        }),
+      ),
     ),
   );
 }

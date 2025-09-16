@@ -1,10 +1,8 @@
-# Live coding: User posts
+# Live coding for Senior developer using legacy syntax
 
-- For senior developers using modern Angular, use the default app (`ng serve`).
-- For senior developers using legacy code, use the [senior-dev-legacy project](./projects/senior-dev-legacy) (`ng serve senior-dev-legacy`).
-- For junior developers, use the [junior-dev project](./projects/junior-dev) (`ng serve junior-dev`).
+- Runs the app with the command: `ng serve senior-dev-legacy`.
 
-## Steps to follow (for senior developers using modern Angular)
+## Steps to follow
 
 - Adds minimal global CSS
 
@@ -26,9 +24,6 @@
 - Creates user-post interface
 - Creates user-posts service
 
-- Creates user-posts resolver
-- Adds user-posts resolver to the user-posts route
-
 - Completes user-posts component implementation
 
 - Creates user-post-item component
@@ -47,7 +42,7 @@
 - Content projection (ng-content)
 - Parent-child communication between components (input)
 - ApplicationConfig providers
-- Routing (Router, Route, RouterLink, RouterLinkActive, Lazy loading, Resolver, withComponentInputBinding, RedirectCommand)
+- Routing (Router, Route, RouterLink, RouterLinkActive, Lazy loading, ActivatedRoute)
 - Service
 - HttpClient and some RxJS (map and catchError operators)
 - Signal
