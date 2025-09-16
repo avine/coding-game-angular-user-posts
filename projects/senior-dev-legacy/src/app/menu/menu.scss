@@ -2,17 +2,3 @@ nav {
   display: flex;
   gap: 0.75rem;
 }
-
-a,
-a:active,
-a:focus {
-  border: 1px solid black;
-  padding: 0.5rem 1rem;
-  color: black;
-  text-decoration: none;
-
-  &.active {
-    background-color: black;
-    color: white;
-  }
-}

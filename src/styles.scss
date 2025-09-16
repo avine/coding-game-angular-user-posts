@@ -3,3 +3,22 @@ body {
   font-family:
     'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.button {
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: black;
+
+  // Form `<a class="button">`
+  text-decoration: none;
+
+  // Form `<button class="button">`
+  font: inherit;
+  cursor: pointer;
+
+  &.button--active {
+    background-color: black;
+    color: white;
+  }
+}

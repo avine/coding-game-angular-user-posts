@@ -1,7 +1,13 @@
 <nav>
-  <button (click)="userId.set(1)" [class.active]="userId() === 1">UserID 1</button>
-  <button (click)="userId.set(2)" [class.active]="userId() === 2">UserID 2</button>
-  <button (click)="userId.set(3)" [class.active]="userId() === 3">UserID 3</button>
+  <button class="button" [class.button--active]="userId() === 1" (click)="userId.set(1)">
+    UserID 1
+  </button>
+  <button class="button" [class.button--active]="userId() === 2" (click)="userId.set(2)">
+    UserID 2
+  </button>
+  <button class="button" [class.button--active]="userId() === 3" (click)="userId.set(3)">
+    UserID 3
+  </button>
 </nav>
 
 @if (posts(); as _posts) {

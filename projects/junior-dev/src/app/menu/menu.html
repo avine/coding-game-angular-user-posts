@@ -1,4 +1,11 @@
 <nav>
-  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-  <a routerLink="/posts" routerLinkActive="active">User posts</a>
+  <a
+    class="button"
+    routerLink="/"
+    routerLinkActive="button--active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Home
+  </a>
+  <a class="button" routerLink="/posts" routerLinkActive="button--active">User posts</a>
 </nav>
