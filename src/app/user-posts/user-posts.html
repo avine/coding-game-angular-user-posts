@@ -1,0 +1,9 @@
+<button class="button" (click)="fetch(1)">User ID 1</button>
+<button class="button" (click)="fetch(2)">User ID 2</button>
+<button class="button" (click)="fetch(3)">User ID 3</button>
+
+@for (userPost of userPosts(); track userPost.id) {
+  <app-user-post-item [post]="userPost" />
+} @empty {
+  <p>pas de donnée</p>
+}
