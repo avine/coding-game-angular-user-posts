@@ -1,59 +1,22 @@
-# CodingGame
+## Steps to follow
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
+- Adds minimal global CSS
 
-## Development server
+- Creates layout in app component
 
-To start a local development server, run:
+- Creates menu component
+- Inserts menu component into app component
 
-```bash
-ng serve
-```
+- Creates home component
+- Adds routing for home component
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Creates user-posts component (without implementation)
+- Adds routing for user-posts component
 
-## Code scaffolding
+- Creates user-post interface
+- Creates user-posts service
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Completes user-posts component implementation
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Creates user-post-item component
+- Inserts user-post-item component into user-posts component
